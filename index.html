@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Hệ thống điểm danh QR</title>
+    <!-- Nhúng font chữ Google Font cho giao diện đẹp hơn -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Hệ thống điểm danh<br><span>QR Code</span></h2>
+        
+        <form>
+            <div class="input-group">
+                <label for="email">Email hoặc MSSV</label>
+                <input type="text" id="email" placeholder="Nhập Email hoặc MSSV" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+            </div>
+
+            <div class="role-group">
+
+                <button type="button" class="role-btn active" data-role="student">
+                    Sinh viên
+                </button>
+
+                <button type="button" class="role-btn" data-role="teacher">
+                    Giảng viên
+                </button>
+
+                <button type="button" class="role-btn" data-role="admin">
+                    Admin
+                </button>
+
+            </div>
+
+            <button type="submit" class="btn-login">Đăng nhập</button>
+        </form>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Danh sách điểm danh</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/teacher-attendance.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand">
+            Danh sách điểm danh
+        </a>
+
+        <a href="dashboard.html"
+           class="btn btn-light">
+
+            Quay lại
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="container mt-5">
+
+    <div class="attendance-card">
+
+        <h2>
+
+            Danh sách sinh viên điểm danh
+
+        </h2>
+
+
+        <div class="table-responsive">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>MSSV</th>
+
+                        <th>Họ tên</th>
+
+                        <th>Thời gian</th>
+
+                        <th>Trạng thái</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="attendanceTable">
+
+                    <!-- Backend sẽ thêm dữ liệu vào đây -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/teacher-attendance.js"></script>
+
+</body>
+</html>

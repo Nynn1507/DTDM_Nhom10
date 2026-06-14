@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/teacher-dashboard.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand">
+            Teacher Dashboard
+        </a>
+
+        <a href="../index.html"
+           class="btn btn-light">
+            Đăng xuất
+        </a>
+
+    </div>
+</nav>
+
+
+<div class="container mt-5">
+
+    <!-- Profile -->
+    <div class="card profile-card">
+
+        <div class="card-body">
+
+            <h3 id="teacherName">
+                Xin chào, 
+            </h3>
+
+            <p id="teacherID">
+                Mã giảng viên:
+            </p>
+
+            <p id="faculty">
+                Khoa:
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Quick Actions -->
+    <div class="row mt-4">
+
+        <div class="col-md-4 mb-3">
+
+            <a href="create-qr.html"
+               class="action-card">
+
+                <h4>🔳</h4>
+
+                <h5>Tạo mã QR</h5>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+
+            <a href="attendance.html"
+               class="action-card">
+
+                <h4>📋</h4>
+
+                <h5>Danh sách điểm danh</h5>
+
+            </a>
+
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+
+            <a href="statistics.html"
+               class="action-card">
+
+                <h4>📊</h4>
+
+                <h5>Thống kê</h5>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Lớp học hôm nay -->
+    <div class="section">
+
+        <h3 class="title">
+            Lớp học hôm nay
+        </h3>
+
+        <div class="row" id="classContainer">
+
+            <!-- Backend sẽ thêm card lớp học vào đây -->
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/teacher-dashboard.js"></script>
+
+</body>
+</html>
