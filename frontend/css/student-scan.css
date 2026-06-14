@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f0f4f8;
+    min-height:100vh;
+}
+
+/* Navbar */
+.navbar{
+    background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.navbar-brand{
+    font-size:22px;
+    font-weight:700;
+}
+
+/* Card */
+.scan-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+/* Title */
+h2{
+    color:#1e293b;
+    text-align:center;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.scan-text{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+/* Camera Frame */
+.camera-frame{
+    width:350px;
+    height:350px;
+
+    margin:auto;
+
+    border:3px solid #3b82f6;
+
+    border-radius:20px;
+
+    background:#fafafa;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+#reader{
+    color:#94a3b8;
+}
+
+/* Scan Line */
+.scan-line{
+    position:absolute;
+
+    width:100%;
+
+    height:3px;
+
+    background:#3b82f6;
+
+    animation:scan 2s infinite;
+}
+
+@keyframes scan{
+
+    0%{
+        top:0;
+    }
+
+    50%{
+        top:calc(100% - 3px);
+    }
+
+    100%{
+        top:0;
+    }
+
+}
+
+/* Result */
+.result-box{
+    margin-top:40px;
+}
+
+.result-box h5{
+    color:#1e293b;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+#scanResult{
+    min-height:80px;
+
+    border:2px dashed #cbd5e1;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    color:#64748b;
+}
+
+/* Button */
+.btn-light{
+    border-radius:12px;
+    font-weight:600;
+}

@@ -1,0 +1,131 @@
+/* Thiết lập cơ bản và font chữ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Căn giữa tuyệt đối hộp đăng nhập ra giữa màn hình */
+body {
+    background: #f0f4f8; /* Màu nền xám xanh dịu mắt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Định dạng hộp đăng nhập */
+.login-box {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 45px 35px;
+    border-radius: 20px;
+    /* Hiệu ứng đổ bóng đổ mờ hiện đại */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+}
+
+/* Định dạng tiêu đề chính */
+h2 {
+    text-align: center;
+    color: #1e293b;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+
+/* Định dạng chữ QR Code nhỏ phía dưới tiêu đề */
+h2 span {
+    color: #3b82f6; /* Màu xanh chủ đạo */
+    font-size: 28px;
+}
+
+/* Định dạng từng cụm ô nhập liệu */
+.input-group {
+    margin-bottom: 22px;
+}
+
+/* Nhãn chữ phía trên ô nhập */
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Ô nhập dữ liệu công nghệ mới */
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #334155;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng đổi màu viền khi người dùng nhấn chuột vào ô nhập */
+.input-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Thiết kế nút bấm đăng nhập sang trọng */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Màu xanh chuyển sắc Gradient */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng khi di chuột (hover) vào nút bấm */
+.btn-login:hover {
+    transform: translateY(-2px); /* Nút hơi nhấc lên nhẹ */
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+/* Hiệu ứng khi nhấn giữ nút bấm */
+.btn-login:active {
+    transform: translateY(0);
+}
+.role-group{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.role-btn{
+    flex: 1;
+    padding: 12px;
+    border: 1.5px solid #e2e8f0;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #64748b;
+    transition: .3s;
+}
+
+.role-btn:hover{
+    border-color: #3b82f6;
+}
+
+.role-btn.active{
+    background: linear-gradient(135deg,#3b82f6,#1d4ed8);
+    color: white;
+    border: none;
+}
