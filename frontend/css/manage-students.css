@@ -78,3 +78,100 @@ body{
     border-radius:12px;
     font-weight:600;
 }
+
+.account-form{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:24px;
+}
+
+.account-form input,
+.account-form select{
+    width:100%;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    padding:10px 12px;
+}
+
+.account-form button{
+    border:none;
+    border-radius:8px;
+    padding:10px 14px;
+    background:#2563eb;
+    color:white;
+    font-weight:600;
+}
+
+.form-message{
+    margin:0;
+    color:#2563eb;
+    align-self:center;
+}
+
+.class-panel{
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:24px;
+    background:#f8fafc;
+}
+
+.class-panel-header{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:center;
+    margin-bottom:14px;
+}
+
+.class-panel h3{
+    font-size:20px;
+    color:#1e293b;
+    margin:0;
+}
+
+#classForm{
+    display:flex;
+    gap:10px;
+}
+
+#classForm input{
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    padding:10px 12px;
+}
+
+#classForm button{
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    padding:10px 14px;
+    font-weight:600;
+}
+
+.class-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    color:#475569;
+}
+
+.class-list span{
+    border:1px solid #cbd5e1;
+    border-radius:999px;
+    background:white;
+    padding:6px 10px;
+}
+
+@media (max-width:768px){
+    .account-form{
+        grid-template-columns:1fr;
+    }
+
+    .class-panel-header,
+    #classForm{
+        align-items:stretch;
+        flex-direction:column;
+    }
+}

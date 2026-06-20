@@ -1,6 +1,8 @@
 <?php
-// api/logout.php
+require_once '../helpers/response.php';
+
 session_start();
 session_destroy();
-sendJSON(['message' => 'Đăng xuất thành công']);
+
+sendJSON(['message' => 'Dang xuat thanh cong']);
 ?>

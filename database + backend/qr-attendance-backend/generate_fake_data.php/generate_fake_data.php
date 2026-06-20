@@ -1,6 +1,6 @@
 <?php
 // generate_fake_data.php
-require_once 'config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
 function randomString($length = 8) {
     return substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, $length);
@@ -23,9 +23,9 @@ $pdo->beginTransaction();
 try {
     // 1. ACCOUNT (5300)
     echo "Đang tạo ACCOUNT...\n";
-    $pdo->prepare("INSERT INTO ACCOUNT (username, password, role) VALUES ('admin', ?, 'admin')")
+    $pdo->prepare("INSERT IGNORE INTO ACCOUNT (username, password, role) VALUES ('admin', ?, 'admin')")
         ->execute([password_hash('admin123', PASSWORD_DEFAULT)]);
-    $adminId = $pdo->lastInsertId();
+    $adminId = $pdo->query("SELECT id FROM ACCOUNT WHERE username = 'admin'")->fetchColumn();
 
     $lecturerIds = [];
     for ($i = 1; $i <= 300; $i++) {

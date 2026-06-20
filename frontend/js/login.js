@@ -1,46 +1,51 @@
-// Lấy tất cả button vai trò
 const roleButtons = document.querySelectorAll(".role-btn");
+const loginForm = document.querySelector("form");
+const usernameInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const loginButton = document.querySelector(".btn-login");
+const errorBox = document.createElement("div");
 
-// Mặc định là sinh viên
 let selectedRole = "student";
 
-// Xử lý khi click chọn vai trò
-roleButtons.forEach(button => {
+errorBox.className = "login-error";
+errorBox.style.color = "#dc3545";
+errorBox.style.marginBottom = "12px";
+errorBox.style.minHeight = "20px";
+loginButton.parentNode.insertBefore(errorBox, loginButton);
 
+roleButtons.forEach((button) => {
     button.addEventListener("click", () => {
-
-        // Xóa active của tất cả button
-        roleButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-        // Thêm active cho button được chọn
+        roleButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
-
-        // Cập nhật vai trò hiện tại
         selectedRole = button.dataset.role;
-
     });
-
 });
 
-
-// Xử lý nút đăng nhập
-document.querySelector(".btn-login").addEventListener("click", (e) => {
-
-    // Ngăn form submit
+loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    errorBox.textContent = "";
+    loginButton.disabled = true;
+    loginButton.textContent = "Dang nhap...";
 
-    if (selectedRole === "student") {
-        window.location.href = "student/dashboard.html";
+    try {
+        const result = await apiRequest("login.php", {
+            method: "POST",
+            body: JSON.stringify({
+                username: usernameInput.value.trim(),
+                password: passwordInput.value
+            })
+        });
+
+        const actualFolder = roleToFolder(result.user.role);
+        if (actualFolder !== selectedRole) {
+            throw new Error("Tai khoan khong dung vai tro da chon");
+        }
+
+        window.location.href = `${actualFolder}/dashboard.html`;
+    } catch (error) {
+        errorBox.textContent = error.message;
+    } finally {
+        loginButton.disabled = false;
+        loginButton.textContent = "Dang nhap";
     }
-
-    else if (selectedRole === "teacher") {
-        window.location.href = "teacher/dashboard.html";
-    }
-
-    else if (selectedRole === "admin") {
-        window.location.href = "admin/dashboard.html";
-    }
-
 });

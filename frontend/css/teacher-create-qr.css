@@ -105,9 +105,9 @@ h2{
 }
 
 .qr-container{
-    width:250px;
+    width:280px;
 
-    height:250px;
+    min-height:300px;
 
     margin:40px auto 0;
 
@@ -126,4 +126,21 @@ h2{
 
 #qrCode{
     color:#94a3b8;
+    max-width:100%;
+    text-align:center;
+}
+
+.qr-image{
+    width:240px;
+    height:240px;
+    display:block;
+    margin:0 auto 14px;
+}
+
+.qr-text{
+    display:block;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    color:#1e293b;
+    font-size:12px;
 }

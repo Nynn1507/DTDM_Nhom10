@@ -13,6 +13,13 @@ CREATE TABLE ACCOUNT (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tai khoan admin mac dinh
+-- Username: admin
+-- Password: admin123
+INSERT INTO ACCOUNT (username, password, role)
+VALUES ('admin', '$2y$10$3YP7NRvfe8WGONsjQuL8UO34unNY/R./gtXQThtIOrC..APuJtG7.', 'admin')
+ON DUPLICATE KEY UPDATE password = VALUES(password), role = 'admin';
+
 -- Bảng STUDENT
 CREATE TABLE STUDENT (
     account_id INT PRIMARY KEY,

@@ -85,7 +85,7 @@ body{
 #attendanceChart,
 #monthlyChart{
 
-    height:350px;
+    min-height:220px;
 
     border:2px dashed #cbd5e1;
 
@@ -107,4 +107,14 @@ body{
 
     font-weight:600;
 
+}
+
+.stat-row{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:10px 0;
+    border-bottom:1px solid #e2e8f0;
+    color:#334155;
 }
